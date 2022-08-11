@@ -1,5 +1,5 @@
 /*Archivo que manejara la logica de nuestro componente*/
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 /*EN ANGULAR LO SIG LO CONOCEMOS COMO DECORADOR
 	SELECTOR -> NOMBRE CON EL QUE PODREMOS USAR EL COMPONENTE
@@ -11,6 +11,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./img.component.scss']
 })
 export class ImgComponent implements OnInit {
+
+
+  @Input() img: string = 'valor inicial';
 
   constructor() { }
 

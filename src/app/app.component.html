@@ -1,5 +1,8 @@
 <!--COMPONENTE-->
-<app-img></app-img>
+<!--PODEMOS RECURRIR A MANDAR DATOS DESDE EL PADRE , UNA VEZ CONFIGURADO
+EL MODULO INPUT-->
+<p><input type="text" [(ngModel)]="imgParent"></p>
+<app-img [img]="imgParent" ></app-img>
 
 
 <router-outlet></router-outlet>

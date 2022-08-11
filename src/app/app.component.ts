@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'componente-store';
+  imgParent: string = '';         /*https://www.w3schools.com/howto/img_avatar.png --- link de prueba img*/
   ayudaCodigo = 'https://stackoverflow.com/questions/64573177/unable-to-resolve-dependency-tree-error-when-installing-npm-packages';
 }
