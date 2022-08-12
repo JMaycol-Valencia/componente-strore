@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ImgComponent } from './componentes/img/img.component';
 import { importType } from '@angular/compiler/src/output/output_ast';
+import { ProductComponent } from './componentes/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ImgComponent
+    ImgComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

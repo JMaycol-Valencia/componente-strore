@@ -4,5 +4,6 @@ EL MODULO INPUT-->
 <p><input type="text" [(ngModel)]="imgParent"></p>
 <app-img (loaded)="onLoaded($event)" [img]="imgParent" ></app-img>
 
+<app-product [producto]="producto" *ngFor="let producto of productos"></app-product>
 
 <router-outlet></router-outlet>
