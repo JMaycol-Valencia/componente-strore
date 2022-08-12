@@ -1,5 +1,5 @@
 /*Archivo que manejara la logica de nuestro componente*/
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 /*EN ANGULAR LO SIG LO CONOCEMOS COMO DECORADOR
 	SELECTOR -> NOMBRE CON EL QUE PODREMOS USAR EL COMPONENTE
@@ -13,11 +13,22 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ImgComponent implements OnInit {
 
 
-  @Input() img: string = 'valor inicial';
+  @Input() img: string = '';
+  @Output() loaded = new EventEmitter<string>();
+  imageDefault = "./assets/imagenes/default.png"
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  imgError(){
+    this.img = this.imageDefault
+  }
+
+  imgLoad(){
+    console.log('Log Hijo');
+    this.loaded.emit(this.img);
   }
 
 }
